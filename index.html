@@ -20,6 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"diegowu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGR2MWBN8G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JGR2MWBN8G');
+</script>
     <meta name="description" content="small data, big tasks">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Diego Wu">
@@ -41,6 +50,9 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Diego Wu</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGR2MWBN8G"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-JGR2MWBN8G","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
 
@@ -59,6 +71,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -80,6 +95,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-main-page"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>main page</a></li><li class="menu-item menu-item-about-me"><a href="/about-me/" rel="section"><i class="fa fa-user fa-fw"></i>about me</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
 
 
 
@@ -120,13 +139,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">tags</span>
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -135,6 +155,10 @@
 
         </div>
       </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -143,10 +167,9 @@
     </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/DiegoWu" class="github-corner" title="For free to follow!" aria-label="For free to follow!" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -193,7 +216,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-14 19:15:48 / Modified: 19:28:12" itemprop="dateCreated datePublished" datetime="2022-04-14T19:15:48+08:00">2022-04-14</time>
+      <time title="Created: 2022-04-14 19:15:48 / Modified: 20:48:10" itemprop="dateCreated datePublished" datetime="2022-04-14T19:15:48+08:00">2022-04-14</time>
     </span>
 
   
@@ -224,131 +247,15 @@
 <li>line bot</li>
 <li>爬蟲</li>
 <li>liff v2 </li>
-<li><del>可能會犯法</del></li>
-</ul>
-<h3 id="line-bot"><a href="#line-bot" class="headerlink" title="line bot"></a>line bot</h3><p>line機器人，可跟著<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20122649/ironman/3122">此文章</a>一步步設計出來</p>
-<h3 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h3><p>一般以python實現，此<a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1j__HsD32Tn987a5w2NwkS8KjObVziemh/view">ppt(from sprout)</a>詳細介紹基礎爬蟲知識</p>
-<p>line每個貼圖有自己的sticker_id，而每組貼圖則有package_id，只需將此兩組數字爬出來即可。</p>
-<p>package_id附在網址上</p>
-<p><img src="https://i.imgur.com/9VcFxNB.jpg"></p>
-<p>sticker_id則需爬出來</p>
-<p><img src="https://i.imgur.com/XcE9CoI.jpg"></p>
-<h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> bs</span><br><span class="line">rr=requests.get(<span class="string">&quot;https://store.line.me/stickershop/product/&#123;intt&#125;/zh-Hant?page=1&quot;</span>.<span class="built_in">format</span>(intt= pkg))</span><br><span class="line">soup= bs(rr.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">name1= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;span&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN09Image&quot;</span>&#125;))</span><br><span class="line">name2= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;div&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Img&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">cover= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;img&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;FnImage&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">header= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;p&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Item01Ttl&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="liff-v2"><a href="#liff-v2" class="headerlink" title="liff v2"></a><a target="_blank" rel="noopener" href="https://developers.line.biz/en/docs/liff/overview/">liff v2</a></h3><p>LINE Front-end Framework<br>使應用程式可在line上運作的平台</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/keezxc1223/liff-2">現成liff v2 from 台灣黑熊</a></p>
-<h2 id="範例sticker"><a href="#範例sticker" class="headerlink" title="範例sticker"></a>範例sticker</h2><p><img src="https://i.imgur.com/TrlWjkh.jpg"></p>
-<h2 id="現成app"><a href="#現成app" class="headerlink" title="現成app"></a>現成app</h2><p>寒假最後與開學前幾天製作出來，只需搜尋 <em>@538nnpty</em> 即可</p>
-<ul>
-<li>目前只能使用動態與靜態貼圖</li>
-<li>沒有聲音及填字功能</li>
-<li>連結不會盜取個資</li>
-<li>小小葉也不會XD</li>
-</ul>
-<p><img src="https://i.imgur.com/jw0YhZ0.jpg"></p>
-<h2 id="不很重要的故事"><a href="#不很重要的故事" class="headerlink" title="不很重要的故事"></a>不很重要的故事</h2><p>因為第一次接觸flex message，遇到一些像是不懂uri與postback定義不熟的問題，很感謝<a target="_blank" rel="noopener" href="https://tingenwei.medium.com/sideproject-linebot-%E5%88%86%E5%B8%B3%E9%BE%8D%E5%AF%B6%E5%AF%B6%E8%A3%BD%E4%BD%9C%E7%B4%80%E9%8C%84-26643e1095cd">龍寶寶開發群組</a>一直讓我煩他們。另外在找json位置的時候需特別注意有時url的命名為uri</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://diegowu.github.io/2022/04/12/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="DiegoWu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Diego Wu">
-      <meta itemprop="description" content="small data, big tasks">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Diego Wu">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/12/hello-world/" class="post-title-link" itemprop="url">about me</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-04-12 20:26:17" itemprop="dateCreated datePublished" datetime="2022-04-12T20:26:17+08:00">2022-04-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-14 11:07:09" itemprop="dateModified" datetime="2022-04-14T11:07:09+08:00">2022-04-14</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/04/12/hello-world/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/04/12/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Welcome-to-Diego’s-blog"><a href="#Welcome-to-Diego’s-blog" class="headerlink" title="Welcome to Diego’s blog!"></a>Welcome to Diego’s blog!</h1><p>this is my first website </p>
-<ul>
-<li>2004</li>
-<li>台灣高三生</li>
-<li>很菜</li>
-</ul>
-<p><em>計劃將來讀計算機專業</em></p>
-<hr>
-<p>關於副標題 <em>small data big task</em>：<br>鸚鵡，一種在在與人們講話互動之後，便能夠模仿起人類說起話來，有時甚至可以滔滔不絕的生物。<br>烏鴉，一種不怎麼受歡迎的鳥類。任誰都會認為鸚鵡的能力比烏鴉更為出色。<br>我們常常為鸚鵡能夠模訪人類説的能力驚奇，然而鸚鵡根本不知道自己在說什麼。<br>而烏鴉，根據真實紀錄：一隻烏鴉在城市中取得了一個堅果，但是他的外殼太過堅硬，他打不開，於是他做了一個觀察，他發現馬路上的車子速度快，可以輾過路上的東西，但是他如果直接從紅綠燈竿子上下去取，那鐵定沒命;於是他又做了第二個觀察，車子在紅燈時會停下。<br>於是他實行一個策略：先在斑馬線附近丟下堅果讓車子輾過，等到紅燈時再下去取，最後也真的取到了。</p>
-<p>雖然這個例子最初是被鄙視AI的人們吐槽AI發展不過是一堆參數與人工標記下的結果，頂多稱得上人工而談不上智慧。但我想以此勉勵自己生活上不管什麼事情都能 <em>small data, big task</em></p>
-
+<li><del>可能會犯法</del>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/14/%E5%A6%82%E4%BD%95%E4%BD%BFLINE%E4%BB%98%E8%B2%BB%E8%B2%BC%E5%9C%96%E5%85%8D%E8%B2%BB%E4%BD%BF%E7%94%A8/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
