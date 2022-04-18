@@ -7,22 +7,26 @@
 <li>line bot</li>
 <li>爬蟲</li>
 <li>liff v2 </li>
-<li><del>智慧財產權知識</del><span id="more"></span></li>
+<li><del>可能會犯法</del></li>
 </ul>
 <h3 id="line-bot"><a href="#line-bot" class="headerlink" title="line bot"></a>line bot</h3><p>line機器人，可跟著<a href="https://ithelp.ithome.com.tw/users/20122649/ironman/3122">此文章</a>一步步設計出來</p>
 <h3 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h3><p>一般以python實現，此<a href="https://drive.google.com/file/d/1j__HsD32Tn987a5w2NwkS8KjObVziemh/view">ppt(from sprout)</a>詳細介紹基礎爬蟲知識</p>
 <p>line每個貼圖有自己的sticker_id，而每組貼圖則有package_id，只需將此兩組數字爬出來即可。</p>
 <p>package_id附在網址上</p>
-<p><img src="https://i.imgur.com/9VcFxNB.jpg"></p>
+<img src= "https://i.imgur.com/9VcFxNB.jpg" width= 70%/>
+
+
 <p>sticker_id則需爬出來</p>
-<p><img src="https://i.imgur.com/XcE9CoI.jpg"></p>
+<img src= "https://i.imgur.com/XcE9CoI.jpg" width= 90%/>
+
 <h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> bs</span><br><span class="line">rr=requests.get(<span class="string">&quot;https://store.line.me/stickershop/product/&#123;intt&#125;/zh-Hant?page=1&quot;</span>.<span class="built_in">format</span>(intt= pkg))</span><br><span class="line">soup= bs(rr.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">name1= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;span&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN09Image&quot;</span>&#125;))</span><br><span class="line">name2= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;div&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Img&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">cover= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;img&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;FnImage&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">header= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;p&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Item01Ttl&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="liff-v2"><a href="#liff-v2" class="headerlink" title="liff v2"></a><a href="https://developers.line.biz/en/docs/liff/overview/">liff v2</a></h3><p>LINE Front-end Framework<br>使應用程式可在line上運作的平台</p>
 <p><a href="https://github.com/keezxc1223/liff-2">現成liff v2 from 台灣黑熊</a></p>
-<h2 id="範例sticker"><a href="#範例sticker" class="headerlink" title="範例sticker"></a>範例sticker</h2><p><img src="https://i.imgur.com/TrlWjkh.jpg"></p>
+<h2 id="範例sticker"><a href="#範例sticker" class="headerlink" title="範例sticker"></a>範例sticker</h2><img src= "https://i.imgur.com/TrlWjkh.jpg" width= 50%/>
+
 <h2 id="現成app"><a href="#現成app" class="headerlink" title="現成app"></a>現成app</h2><p>寒假最後與開學前幾天製作出來，只需搜尋 <em>@538nnpty</em> 即可</p>
 <ul>
 <li>目前只能使用動態與靜態貼圖</li>
@@ -30,8 +34,10 @@
 <li>連結不會盜取個資</li>
 <li>小小葉也不會XD</li>
 </ul>
-<p><img src="https://i.imgur.com/jw0YhZ0.jpg"></p>
-<h2 id="不很重要的故事"><a href="#不很重要的故事" class="headerlink" title="不很重要的故事"></a>不很重要的故事</h2><p>因為第一次接觸flex message，遇到一些像是不懂uri與postback定義不熟的問題，很感謝<a href="https://tingenwei.medium.com/sideproject-linebot-%E5%88%86%E5%B8%B3%E9%BE%8D%E5%AF%B6%E5%AF%B6%E8%A3%BD%E4%BD%9C%E7%B4%80%E9%8C%84-26643e1095cd">龍寶寶開發群組</a>一直讓我煩他們。另外在找json位置的時候需特別注意有時url的命名為uri</p>
+<img src= "https://i.imgur.com/jw0YhZ0.jpg" width= 55%/>
+
+
+<h2 id="不很重要的故事"><a href="#不很重要的故事" class="headerlink" title="不很重要的故事"></a>不很重要的故事</h2><p>因為第一次接觸flex message，遇到一些像是不懂uri與postback定義不熟的問題，很感謝<a href="https://tingenwei.medium.com/sideproject-linebot-%E5%88%86%E5%B8%B3%E9%BE%8D%E5%AF%B6%E5%AF%B6%E8%A3%BD%E4%BD%9C%E7%B4%80%E9%8C%84-26643e1095cd">龍寶寶開發群組</a>一直讓我煩他們。另外在找json位置的時候需別注意有時url的命名為uri</p>
 ]]></content>
       <tags>
         <tag>Line bot</tag>
