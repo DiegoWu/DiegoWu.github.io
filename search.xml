@@ -7,9 +7,10 @@
 <li>line bot</li>
 <li>爬蟲</li>
 <li>liff v2 </li>
-<li><del>智慧財產權知識</del></li>
+<li><del>智慧財產權知識</del><span id="more"></span>
+<h3 id="line-bot"><a href="#line-bot" class="headerlink" title="line bot"></a>line bot</h3></li>
 </ul>
-<h3 id="line-bot"><a href="#line-bot" class="headerlink" title="line bot"></a>line bot</h3><p>line機器人，可跟著<a href="https://ithelp.ithome.com.tw/users/20122649/ironman/3122">此文章</a>一步步設計出來</p>
+<p>line機器人，可跟著<a href="https://ithelp.ithome.com.tw/users/20122649/ironman/3122">此文章</a>一步步設計出來</p>
 <h3 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h3><p>一般以python實現，此<a href="https://drive.google.com/file/d/1j__HsD32Tn987a5w2NwkS8KjObVziemh/view">ppt(from sprout)</a>詳細介紹基礎爬蟲知識</p>
 <p>line每個貼圖有自己的sticker_id，而每組貼圖則有package_id，只需將此兩組數字爬出來即可。</p>
 <p>package_id附在網址上</p>
