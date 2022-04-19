@@ -10,4 +10,4 @@ Allow: /main/
 # Disallow: /css/
 # Disallow: /fancybox/
 
-Sitemap: https://augustushsu.github.io/sitemap.xml
+Sitemap: https://diegowu.github.io/sitemap.xml
