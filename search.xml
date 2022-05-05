@@ -3,9 +3,9 @@
   <entry>
     <title>Sudoku 數獨問題</title>
     <url>/2022/05/05/Sudoku%20%E6%95%B8%E7%8D%A8%E5%95%8F%E9%A1%8C/</url>
-    <content><![CDATA[<span id="more"></span>
-<h2 id="題序"><a href="#題序" class="headerlink" title="題序"></a>題序</h2><p>給定一個n*n的表格，求字典序最小之解，若無解則輸出”NO SOLUTION”</p>
+    <content><![CDATA[<h2 id="題序"><a href="#題序" class="headerlink" title="題序"></a>題序</h2><p>給定一個n*n的表格，求字典序最小之解，若無解則輸出”NO SOLUTION”</p>
 <p>限制範圍: n&lt;&#x3D; 3, 1&lt;&#x3D; digits&lt;&#x3D; n^2</p>
+<span id="more"></span>
 <p>題目： <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=930">uva989</a></p>
 <h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><ul>
 <li><p>DFS(depth first search) </p>
@@ -18,6 +18,48 @@
 <h2 id="code-dfs"><a href="#code-dfs" class="headerlink" title="code (dfs)"></a>code (dfs)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> n 10</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt; &gt; <span class="built_in">m</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n)); </span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt; &gt; <span class="built_in">row</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n));</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt; &gt; <span class="built_in">col</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n));</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt; &gt; <span class="built_in">mt</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n));</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt; &gt; <span class="built_in">fix</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n));</span><br><span class="line"><span class="type">int</span> f= <span class="number">0</span>, ans= <span class="number">1</span>, nn, gg= <span class="number">0</span>; </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> flag= <span class="number">0</span>, z= y/nn, yu= y%(nn*nn); </span><br><span class="line">	<span class="keyword">if</span>(x== nn*nn<span class="number">-1</span>) yu++;</span><br><span class="line">	<span class="keyword">if</span>(x==y&amp;&amp;y==nn*nn<span class="number">-1</span>&amp;&amp;fix[y][x]) f= <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(fix[y][x]) <span class="built_in">dfs</span>((x+<span class="number">1</span>)%(nn*nn), yu); </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;nn*nn+<span class="number">1</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(f||fix[y][x]) <span class="keyword">continue</span>; </span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(col[y][i]|| row[x][i]||mt[x/nn+z*nn][i])&#123;</span><br><span class="line">			flag++; </span><br><span class="line">			<span class="keyword">continue</span>; </span><br><span class="line">		&#125;</span><br><span class="line">		col[y][i]= <span class="number">1</span>,row[x][i]= <span class="number">1</span>, mt[x/nn+z*nn][i]= <span class="number">1</span>;  </span><br><span class="line">		m[y][x]= i; </span><br><span class="line">		<span class="built_in">dfs</span>((x+<span class="number">1</span>)%(nn*nn), yu); </span><br><span class="line"></span><br><span class="line">		col[y][i]= <span class="number">0</span>, row[x][i]= <span class="number">0</span>, mt[x/nn+z*nn][i]= <span class="number">0</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(x==y&amp;&amp;y==nn*nn<span class="number">-1</span>&amp;&amp;flag!= nn*nn) f= <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(flag== nn*nn) <span class="keyword">return</span>; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;nn)&#123; </span><br><span class="line">		<span class="keyword">if</span>(gg++) cout&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n; i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</span><br><span class="line">				col[i][j]= <span class="number">0</span>; </span><br><span class="line">				row[i][j]= <span class="number">0</span>; </span><br><span class="line">				mt[i][j]= <span class="number">0</span>; </span><br><span class="line">				fix[i][j]= <span class="number">0</span>; </span><br><span class="line">				f= <span class="number">0</span>; </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;nn*nn; i++)&#123;</span><br><span class="line">			<span class="type">int</span> y= i/nn; </span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;nn*nn; j++) &#123;</span><br><span class="line">				cin&gt;&gt;m[i][j]; </span><br><span class="line">				fix[i][j]= m[i][j]; </span><br><span class="line">				<span class="keyword">if</span>(m[i][j]== <span class="number">0</span>) <span class="keyword">continue</span>; </span><br><span class="line">				col[i][m[i][j]]++;</span><br><span class="line">				row[j][m[i][j]]++; </span><br><span class="line">				mt[j/nn+y*nn][m[i][j]]++; </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">dfs</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(!f) cout&lt;&lt;<span class="string">&quot;NO SOLUTION&quot;</span>&lt;&lt;endl; </span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;nn*nn; i++)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;nn*nn; j++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(j) cout&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">					cout&lt;&lt;m[i][j]; </span><br><span class="line">				&#125;</span><br><span class="line">				cout&lt;&lt;endl;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">solve</span>(); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>algorithms&amp; data structures</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使LINE付費貼圖免費使用</title>
+    <url>/2022/04/14/%E5%A6%82%E4%BD%95%E4%BD%BFLINE%E4%BB%98%E8%B2%BB%E8%B2%BC%E5%9C%96%E5%85%8D%E8%B2%BB%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="所需元素"><a href="#所需元素" class="headerlink" title="所需元素"></a>所需元素</h2><ul>
+<li>line bot</li>
+<li>爬蟲</li>
+<li>liff v2 </li>
+<li><del>智慧財產權知識</del><span id="more"></span>
+<h3 id="line-bot"><a href="#line-bot" class="headerlink" title="line bot"></a>line bot</h3></li>
+</ul>
+<p>line機器人，可跟著<a href="https://ithelp.ithome.com.tw/users/20122649/ironman/3122">此文章</a>一步步設計出來</p>
+<h3 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h3><p>一般以python實現，此<a href="https://drive.google.com/file/d/1j__HsD32Tn987a5w2NwkS8KjObVziemh/view">ppt(from sprout)</a>詳細介紹基礎爬蟲知識</p>
+<p>line每個貼圖有自己的sticker_id，而每組貼圖則有package_id，只需將此兩組數字爬出來即可。</p>
+<p>package_id附在網址上</p>
+<img src= "https://i.imgur.com/9VcFxNB.jpg" width= 70%/>
+
+
+<p>sticker_id則需爬出來</p>
+<img src= "https://i.imgur.com/XcE9CoI.jpg" width= 90%/>
+
+<h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> bs</span><br><span class="line">rr=requests.get(<span class="string">&quot;https://store.line.me/stickershop/product/&#123;intt&#125;/zh-Hant?page=1&quot;</span>.<span class="built_in">format</span>(intt= pkg))</span><br><span class="line">soup= bs(rr.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">name1= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;span&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN09Image&quot;</span>&#125;))</span><br><span class="line">name2= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;div&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Img&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">cover= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;img&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;FnImage&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">header= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;p&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Item01Ttl&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="liff-v2"><a href="#liff-v2" class="headerlink" title="liff v2"></a><a href="https://developers.line.biz/en/docs/liff/overview/">liff v2</a></h3><p>LINE Front-end Framework<br>使應用程式可在line上運作的平台</p>
+<p><a href="https://github.com/keezxc1223/liff-2">現成liff v2 from 台灣黑熊</a></p>
+<h2 id="範例sticker"><a href="#範例sticker" class="headerlink" title="範例sticker"></a>範例sticker</h2><img src= "https://i.imgur.com/TrlWjkh.jpg" width= 50%/>
+
+<h2 id="現成app"><a href="#現成app" class="headerlink" title="現成app"></a>現成app</h2><p>寒假最後與開學前幾天製作出來，只需搜尋 <em>@538nnpty</em> 即可</p>
+<ul>
+<li>目前只能使用動態與靜態貼圖</li>
+<li>沒有聲音及填字功能</li>
+<li>連結不會盜取個資</li>
+<li>小小葉也不會XD</li>
+</ul>
+<img src= "https://i.imgur.com/jw0YhZ0.jpg" width= 55%/>
+
+
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><h6 id="故事時間"><a href="#故事時間" class="headerlink" title="故事時間"></a><code>故事時間</code></h6><p>因為第一次接觸flex message，遇到一些像是uri與postback定義不熟的問題，很感謝<a href="https://tingenwei.medium.com/sideproject-linebot-%E5%88%86%E5%B8%B3%E9%BE%8D%E5%AF%B6%E5%AF%B6%E8%A3%BD%E4%BD%9C%E7%B4%80%E9%8C%84-26643e1095cd">龍寶寶開發群組</a>一直讓我煩他們。另外在找json位置的時候需特別注意有時url的命名為uri</p>
+]]></content>
+      <tags>
+        <tag>Line bot</tag>
       </tags>
   </entry>
   <entry>
@@ -193,48 +235,6 @@
 ]]></content>
       <tags>
         <tag>升學</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何使LINE付費貼圖免費使用</title>
-    <url>/2022/04/14/%E5%A6%82%E4%BD%95%E4%BD%BFLINE%E4%BB%98%E8%B2%BB%E8%B2%BC%E5%9C%96%E5%85%8D%E8%B2%BB%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="所需元素"><a href="#所需元素" class="headerlink" title="所需元素"></a>所需元素</h2><ul>
-<li>line bot</li>
-<li>爬蟲</li>
-<li>liff v2 </li>
-<li><del>智慧財產權知識</del><span id="more"></span>
-<h3 id="line-bot"><a href="#line-bot" class="headerlink" title="line bot"></a>line bot</h3></li>
-</ul>
-<p>line機器人，可跟著<a href="https://ithelp.ithome.com.tw/users/20122649/ironman/3122">此文章</a>一步步設計出來</p>
-<h3 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h3><p>一般以python實現，此<a href="https://drive.google.com/file/d/1j__HsD32Tn987a5w2NwkS8KjObVziemh/view">ppt(from sprout)</a>詳細介紹基礎爬蟲知識</p>
-<p>line每個貼圖有自己的sticker_id，而每組貼圖則有package_id，只需將此兩組數字爬出來即可。</p>
-<p>package_id附在網址上</p>
-<img src= "https://i.imgur.com/9VcFxNB.jpg" width= 70%/>
-
-
-<p>sticker_id則需爬出來</p>
-<img src= "https://i.imgur.com/XcE9CoI.jpg" width= 90%/>
-
-<h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> bs</span><br><span class="line">rr=requests.get(<span class="string">&quot;https://store.line.me/stickershop/product/&#123;intt&#125;/zh-Hant?page=1&quot;</span>.<span class="built_in">format</span>(intt= pkg))</span><br><span class="line">soup= bs(rr.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">name1= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;span&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN09Image&quot;</span>&#125;))</span><br><span class="line">name2= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;div&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Img&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">cover= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;img&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;FnImage&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br><span class="line">header= <span class="built_in">str</span>(soup.find_all(<span class="string">&quot;p&quot;</span>, &#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;mdCMN38Item01Ttl&quot;</span>&#125;, limit= <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-
-<h3 id="liff-v2"><a href="#liff-v2" class="headerlink" title="liff v2"></a><a href="https://developers.line.biz/en/docs/liff/overview/">liff v2</a></h3><p>LINE Front-end Framework<br>使應用程式可在line上運作的平台</p>
-<p><a href="https://github.com/keezxc1223/liff-2">現成liff v2 from 台灣黑熊</a></p>
-<h2 id="範例sticker"><a href="#範例sticker" class="headerlink" title="範例sticker"></a>範例sticker</h2><img src= "https://i.imgur.com/TrlWjkh.jpg" width= 50%/>
-
-<h2 id="現成app"><a href="#現成app" class="headerlink" title="現成app"></a>現成app</h2><p>寒假最後與開學前幾天製作出來，只需搜尋 <em>@538nnpty</em> 即可</p>
-<ul>
-<li>目前只能使用動態與靜態貼圖</li>
-<li>沒有聲音及填字功能</li>
-<li>連結不會盜取個資</li>
-<li>小小葉也不會XD</li>
-</ul>
-<img src= "https://i.imgur.com/jw0YhZ0.jpg" width= 55%/>
-
-
-<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><h6 id="故事時間"><a href="#故事時間" class="headerlink" title="故事時間"></a><code>故事時間</code></h6><p>因為第一次接觸flex message，遇到一些像是uri與postback定義不熟的問題，很感謝<a href="https://tingenwei.medium.com/sideproject-linebot-%E5%88%86%E5%B8%B3%E9%BE%8D%E5%AF%B6%E5%AF%B6%E8%A3%BD%E4%BD%9C%E7%B4%80%E9%8C%84-26643e1095cd">龍寶寶開發群組</a>一直讓我煩他們。另外在找json位置的時候需特別注意有時url的命名為uri</p>
-]]></content>
-      <tags>
-        <tag>Line bot</tag>
       </tags>
   </entry>
 </search>
