@@ -4,7 +4,7 @@
   <url>
     <loc>https://diegowu.github.io/2022/05/05/Sudoku%20%E6%95%B8%E7%8D%A8%E5%95%8F%E9%A1%8C/</loc>
     
-    <lastmod>2022-05-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
 
   <url>
     <loc>https://diegowu.github.io/</loc>
-    <lastmod>2022-05-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,21 +57,21 @@
   
   <url>
     <loc>https://diegowu.github.io/tags/algorithms-data-structures/</loc>
-    <lastmod>2022-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://diegowu.github.io/tags/Line-bot/</loc>
-    <lastmod>2022-05-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://diegowu.github.io/tags/%E5%8D%87%E5%AD%B8/</loc>
-    <lastmod>2022-05-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://diegowu.github.io/tags/Line-bot/</loc>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
