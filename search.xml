@@ -3,7 +3,8 @@
   <entry>
     <title>Sudoku數獨問題</title>
     <url>/2022/05/05/Sudoku%20%E6%95%B8%E7%8D%A8%E5%95%8F%E9%A1%8C/</url>
-    <content><![CDATA[<h2 id="題序"><a href="#題序" class="headerlink" title="題序"></a>題序</h2><p>給定一個n*n的表格，保證原始表格合法，求字典序最小之解，若無解則輸出”NO SOLUTION”</p>
+    <content><![CDATA[<p><img src="https://i.imgur.com/aXanRB5.jpg"></p>
+<h2 id="題序"><a href="#題序" class="headerlink" title="題序"></a>題序</h2><p>給定一個n*n的表格，保證原始表格合法，求字典序最小之解，若無解則輸出”NO SOLUTION”</p>
 <span id="more"></span>
 
 <p>限制範圍: n&lt;&#x3D; 3, 1&lt;&#x3D; digits&lt;&#x3D; n^2</p>
