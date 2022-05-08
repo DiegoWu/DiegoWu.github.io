@@ -3,7 +3,9 @@
   <entry>
     <title>Sudoku數獨問題</title>
     <url>/2022/05/05/Sudoku%20%E6%95%B8%E7%8D%A8%E5%95%8F%E9%A1%8C/</url>
-    <content><![CDATA[<h2 id="題序"><a href="#題序" class="headerlink" title="題序"></a>題序</h2><p>給定一個n*n的表格，求字典序最小之解，若無解則輸出”NO SOLUTION”</p>
+    <content><![CDATA[<h2 id="題序"><a href="#題序" class="headerlink" title="題序"></a>題序</h2><p>給定一個n*n的表格，保證原始表格合法，求字典序最小之解，若無解則輸出”NO SOLUTION”</p>
+<span id="more"></span>
+
 <p>限制範圍: n&lt;&#x3D; 3, 1&lt;&#x3D; digits&lt;&#x3D; n^2</p>
 <p>題目： <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=930">uva989</a>、<a href="https://tioj.ck.tp.edu.tw/problems/1025">tioj 1025</a></p>
 <h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><ul>
