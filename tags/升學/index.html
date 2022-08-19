@@ -310,6 +310,15 @@
 
 
 
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Twitter,Facebook,Linkedin,Mailto,Reddit,GooglePlus";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"eTLt8ufISrc1jLapnbJcTz7q-MdYXbMMI","appKey":"UyCupV7coDS2uDwFqXQUKSGl","serverURLs":"https://etlt8ufi.api.lncldglobal.com","placeholder":"just leave the nick name and then you can comment!","avatar":"mm","meta":["nick","mail","link"],"pageSize":7,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"],"el":"#valine-comments","path":"/tags/%E5%8D%87%E5%AD%B8/"}</script>
 <script>
@@ -325,14 +334,5 @@ document.addEventListener('page:loaded', () => {
 });
 </script>
 
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
-  <script>
-      pbOptions = {};
-        pbOptions.iconStyle = "box";
-        pbOptions.boxForm = "horizontal";
-        pbOptions.position = "bottomCenter";
-        pbOptions.networks = "Twitter,Facebook,Linkedin,Mailto,Reddit,GooglePlus";
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-  </script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
