@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://diegowu.github.io/2022/08/19/Speed%20Run%20PSY%20202/</loc>
+    
+    <lastmod>2022-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://diegowu.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://diegowu.github.io/about-me/index.html</loc>
     
-    <lastmod>2022-08-11</lastmod>
+    <lastmod>2022-08-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +76,7 @@
 
   <url>
     <loc>https://diegowu.github.io/</loc>
-    <lastmod>2022-08-11</lastmod>
+    <lastmod>2022-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,25 +84,39 @@
   
   <url>
     <loc>https://diegowu.github.io/tags/algorithms-data-structures/</loc>
-    <lastmod>2022-08-11</lastmod>
+    <lastmod>2022-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://diegowu.github.io/tags/%E5%8D%87%E5%AD%B8/</loc>
-    <lastmod>2022-08-11</lastmod>
+    <lastmod>2022-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://diegowu.github.io/tags/Line-bot/</loc>
-    <lastmod>2022-08-11</lastmod>
+    <lastmod>2022-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://diegowu.github.io/tags/Speed-Run/</loc>
+    <lastmod>2022-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://diegowu.github.io/categories/Psychology/</loc>
+    <lastmod>2022-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
