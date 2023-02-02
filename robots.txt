@@ -1,9 +1,0 @@
-
-User-agent: *
-Allow: /
-Allow: /archives/
-Allow: /tags/
-Allow: /about/ 
-Allow: /main/
-
-Sitemap: https://diegowu.github.io/sitemap.xml
